@@ -1,0 +1,67 @@
+ML pipeline for kaggle project:
+
+
+elo-merchant-recommendation/
+│
+├── data/                      # Raw and processed data
+│   ├── raw/                   # Original competition data
+│   │   ├── train.csv          # Training data with target
+│   │   ├── test.csv           # Test data for predictions
+│   │   ├── merchants.csv      # Merchant information
+│   │   ├── historical_transactions.csv  # Historical transactions
+│   │   ├── new_merchant_transactions.csv # New merchant transactions
+│   │   └── sample_submission.csv  # Submission format
+│   │
+│   └── processed/             # Data after preprocessing
+│       ├── train_features.csv  # Training features
+│       ├── test_features.csv   # Test features
+│       └── meta_features.csv   # Additional features
+│
+├── notebooks/                 # Jupyter notebooks for exploration
+│   ├── 01_data_exploration.ipynb
+│   ├── 02_feature_engineering.ipynb
+│   ├── 03_model_development.ipynb
+│   └── 04_model_evaluation.ipynb
+│
+├── src/                       # Source code
+│   ├── __init__.py
+│   ├── data/
+│   │   ├── __init__.py
+│   │   ├── make_dataset.py    # Scripts to download or generate data
+│   │   └── preprocess.py      # Data preprocessing
+│   │
+│   ├── features/
+│   │   ├── __init__.py
+│   │   └── build_features.py  # Feature engineering
+│   │
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── train_model.py     # Model training
+│   │   ├── predict_model.py   # Model prediction
+│   │   └── evaluate_model.py  # Model evaluation
+│   │
+│   └── visualization/
+│       ├── __init__.py
+│       └── visualize.py       # Visualization functions
+│
+├── models/                    # Saved models
+│   ├── model_v1.pkl
+│   └── model_v2.pkl
+│
+├── outputs/                   # Model prediction outputs
+│   ├── submission_v1.csv
+│   └── submission_v2.csv
+│
+├── reports/                   # Generated analysis reports
+│   ├── figures/               # Generated graphics and figures
+│   └── final_report.md        # Final report
+│
+├── requirements.txt           # Project dependencies
+├── setup.py                   # Make project pip installable
+├── README.md                  # Project documentation
+└── .gitignore                 # Files to ignore in git
+
+
+
+
+
